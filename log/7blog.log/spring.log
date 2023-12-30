@@ -1,0 +1,255 @@
+2021-08-04 16:25:41.599  INFO 16332 --- [restartedMain] com.wu.blog.Application                  : Starting Application on DESKTOP-L2NQSBF with PID 16332 (G:\IntelliJIDEA2018\7blog\target\classes started by 57one in G:\IntelliJIDEA2018\7blog)
+2021-08-04 16:25:41.610 DEBUG 16332 --- [restartedMain] com.wu.blog.Application                  : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2021-08-04 16:25:41.611  INFO 16332 --- [restartedMain] com.wu.blog.Application                  : No active profile set, falling back to default profiles: default
+2021-08-04 16:25:41.657  INFO 16332 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-04 16:25:41.659  INFO 16332 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-04 16:25:44.429  INFO 16332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-08-04 16:25:44.438  INFO 16332 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-04 16:25:44.438  INFO 16332 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-08-04 16:25:44.520  INFO 16332 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-04 16:25:44.520  INFO 16332 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2861 ms
+2021-08-04 16:25:45.450  INFO 16332 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-04 16:25:45.531  INFO 16332 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-04 16:25:45.559  WARN 16332 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-08-04 16:25:45.679  INFO 16332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-08-04 16:25:45.679  INFO 16332 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-08-04 16:25:45.699  INFO 16332 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-08-04 16:25:45.732  INFO 16332 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-08-04 16:25:45.910  INFO 16332 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteBlogByIdUsingDELETE_1
+2021-08-04 16:25:45.937  INFO 16332 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addTypeUsingPOST_1
+2021-08-04 16:25:45.937  INFO 16332 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingDELETE_1
+2021-08-04 16:25:45.943  INFO 16332 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findTypesByTypeNameUsingGET_1
+2021-08-04 16:25:45.943  INFO 16332 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2021-08-04 16:25:45.979  INFO 16332 --- [restartedMain] com.wu.blog.Application                  : Started Application in 4.971 seconds (JVM running for 6.95)
+2021-08-04 16:26:51.483  INFO 16332 --- [http-nio-8081-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-04 16:26:51.483  INFO 16332 --- [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-04 16:26:51.487  INFO 16332 --- [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2021-08-04 16:26:51.526  INFO 16332 --- [http-nio-8081-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-04 16:26:54.389  INFO 16332 --- [http-nio-8081-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-04 16:26:54.403 DEBUG 16332 --- [http-nio-8081-exec-5] com.wu.blog.dao.CommonDao.findCommon     : ==>  Preparing: select * from t_common limit 0,1
+2021-08-04 16:26:54.403 DEBUG 16332 --- [http-nio-8081-exec-3] c.w.b.d.B.findBlogsByConditionOfPages    : ==>  Preparing: select * from t_blog WHERE published = 1 order by create_time desc limit ?,?
+2021-08-04 16:26:54.411 DEBUG 16332 --- [http-nio-8081-exec-4] c.w.b.d.B.findBlogsNumByConditionOfPages : ==>  Preparing: select COUNT(*) from t_blog WHERE published = 1
+2021-08-04 16:26:54.420 DEBUG 16332 --- [http-nio-8081-exec-6] c.w.b.d.B.findBlogsNumByConditionOfPages : ==>  Preparing: select COUNT(*) from t_blog WHERE published = 1 and recommend = 1
+2021-08-04 16:26:54.423 DEBUG 16332 --- [http-nio-8081-exec-5] com.wu.blog.dao.CommonDao.findCommon     : ==> Parameters: 
+2021-08-04 16:26:54.423 DEBUG 16332 --- [http-nio-8081-exec-4] c.w.b.d.B.findBlogsNumByConditionOfPages : ==> Parameters: 
+2021-08-04 16:26:54.423 DEBUG 16332 --- [http-nio-8081-exec-6] c.w.b.d.B.findBlogsNumByConditionOfPages : ==> Parameters: 
+2021-08-04 16:26:54.423 DEBUG 16332 --- [http-nio-8081-exec-3] c.w.b.d.B.findBlogsByConditionOfPages    : ==> Parameters: 0(Integer), 5(Integer)
+2021-08-04 16:26:54.428 DEBUG 16332 --- [http-nio-8081-exec-1] c.w.b.d.B.findBlogsByConditionOfPages    : ==>  Preparing: select * from t_blog WHERE published = 1 and recommend = 1 order by create_time desc limit ?,?
+2021-08-04 16:26:54.429 DEBUG 16332 --- [http-nio-8081-exec-1] c.w.b.d.B.findBlogsByConditionOfPages    : ==> Parameters: 0(Integer), 4(Integer)
+2021-08-04 16:26:54.436 DEBUG 16332 --- [http-nio-8081-exec-7] c.w.b.d.SentenceDao.getRandomSentences   : ==>  Preparing: select * from t_sentence order by RAND() limit 15
+2021-08-04 16:26:54.436 DEBUG 16332 --- [http-nio-8081-exec-7] c.w.b.d.SentenceDao.getRandomSentences   : ==> Parameters: 
+2021-08-04 16:26:54.450 DEBUG 16332 --- [http-nio-8081-exec-2] com.wu.blog.dao.TypeDao.findAllTypes     : ==>  Preparing: select * from t_type where parent_id = 0
+2021-08-04 16:26:54.450 DEBUG 16332 --- [http-nio-8081-exec-2] com.wu.blog.dao.TypeDao.findAllTypes     : ==> Parameters: 
+2021-08-04 16:26:54.464 DEBUG 16332 --- [http-nio-8081-exec-7] c.w.b.d.SentenceDao.getRandomSentences   : <==      Total: 0
+2021-08-04 16:26:54.467 DEBUG 16332 --- [http-nio-8081-exec-5] com.wu.blog.dao.CommonDao.findCommon     : <==      Total: 1
+2021-08-04 16:26:54.467 DEBUG 16332 --- [http-nio-8081-exec-4] c.w.b.d.B.findBlogsNumByConditionOfPages : <==      Total: 1
+2021-08-04 16:26:54.467 DEBUG 16332 --- [http-nio-8081-exec-6] c.w.b.d.B.findBlogsNumByConditionOfPages : <==      Total: 1
+2021-08-04 16:26:54.468 DEBUG 16332 --- [http-nio-8081-exec-1] com.wu.blog.dao.BlogDao.findTypeById     : ====>  Preparing: select * from t_type where type_id = ?
+2021-08-04 16:26:54.468 DEBUG 16332 --- [http-nio-8081-exec-3] com.wu.blog.dao.BlogDao.findTypeById     : ====>  Preparing: select * from t_type where type_id = ?
+2021-08-04 16:26:54.469 DEBUG 16332 --- [http-nio-8081-exec-3] com.wu.blog.dao.BlogDao.findTypeById     : ====> Parameters: 2(Integer)
+2021-08-04 16:26:54.469 DEBUG 16332 --- [http-nio-8081-exec-1] com.wu.blog.dao.BlogDao.findTypeById     : ====> Parameters: 6(Integer)
+2021-08-04 16:26:54.469 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ====>  Preparing: select * from t_type where parent_id = ?
+2021-08-04 16:26:54.469 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ====> Parameters: 1(Integer)
+2021-08-04 16:26:54.470 DEBUG 16332 --- [http-nio-8081-exec-1] com.wu.blog.dao.BlogDao.findTypeById     : <====      Total: 1
+2021-08-04 16:26:54.470 DEBUG 16332 --- [http-nio-8081-exec-3] com.wu.blog.dao.BlogDao.findTypeById     : <====      Total: 1
+2021-08-04 16:26:54.470 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======>  Preparing: select * from t_type where parent_id = ?
+2021-08-04 16:26:54.470 DEBUG 16332 --- [http-nio-8081-exec-1] com.wu.blog.dao.BlogDao.findTypeById     : ====>  Preparing: select * from t_type where type_id = ?
+2021-08-04 16:26:54.471 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======> Parameters: 2(Integer)
+2021-08-04 16:26:54.471 DEBUG 16332 --- [http-nio-8081-exec-1] com.wu.blog.dao.BlogDao.findTypeById     : ====> Parameters: 7(Integer)
+2021-08-04 16:26:54.472 DEBUG 16332 --- [http-nio-8081-exec-3] com.wu.blog.dao.BlogDao.findTypeById     : ====>  Preparing: select * from t_type where type_id = ?
+2021-08-04 16:26:54.472 DEBUG 16332 --- [http-nio-8081-exec-3] com.wu.blog.dao.BlogDao.findTypeById     : ====> Parameters: 6(Integer)
+2021-08-04 16:26:54.472 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <======      Total: 0
+2021-08-04 16:26:54.472 DEBUG 16332 --- [http-nio-8081-exec-1] com.wu.blog.dao.BlogDao.findTypeById     : <====      Total: 1
+2021-08-04 16:26:54.472 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======>  Preparing: select * from t_type where parent_id = ?
+2021-08-04 16:26:54.473 DEBUG 16332 --- [http-nio-8081-exec-3] com.wu.blog.dao.BlogDao.findTypeById     : <====      Total: 1
+2021-08-04 16:26:54.474 DEBUG 16332 --- [http-nio-8081-exec-1] c.w.b.d.B.findBlogsByConditionOfPages    : <==      Total: 4
+2021-08-04 16:26:54.481 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======> Parameters: 3(Integer)
+2021-08-04 16:26:54.481 DEBUG 16332 --- [http-nio-8081-exec-3] com.wu.blog.dao.BlogDao.findTypeById     : ====>  Preparing: select * from t_type where type_id = ?
+2021-08-04 16:26:54.482 DEBUG 16332 --- [http-nio-8081-exec-3] com.wu.blog.dao.BlogDao.findTypeById     : ====> Parameters: 7(Integer)
+2021-08-04 16:26:54.482 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <======      Total: 0
+2021-08-04 16:26:54.482 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======>  Preparing: select * from t_type where parent_id = ?
+2021-08-04 16:26:54.483 DEBUG 16332 --- [http-nio-8081-exec-3] com.wu.blog.dao.BlogDao.findTypeById     : <====      Total: 1
+2021-08-04 16:26:54.483 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======> Parameters: 4(Integer)
+2021-08-04 16:26:54.486 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <======      Total: 0
+2021-08-04 16:26:54.486 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <====      Total: 3
+2021-08-04 16:26:54.486 DEBUG 16332 --- [http-nio-8081-exec-3] c.w.b.d.B.findBlogsByConditionOfPages    : <==      Total: 5
+2021-08-04 16:26:54.487 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ====>  Preparing: select * from t_type where parent_id = ?
+2021-08-04 16:26:54.487 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ====> Parameters: 5(Integer)
+2021-08-04 16:26:54.488 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======>  Preparing: select * from t_type where parent_id = ?
+2021-08-04 16:26:54.488 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======> Parameters: 6(Integer)
+2021-08-04 16:26:54.489 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <======      Total: 0
+2021-08-04 16:26:54.490 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======>  Preparing: select * from t_type where parent_id = ?
+2021-08-04 16:26:54.491 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======> Parameters: 7(Integer)
+2021-08-04 16:26:54.491 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <======      Total: 0
+2021-08-04 16:26:54.492 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <====      Total: 2
+2021-08-04 16:26:54.492 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ====>  Preparing: select * from t_type where parent_id = ?
+2021-08-04 16:26:54.492 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ====> Parameters: 10(Integer)
+2021-08-04 16:26:54.493 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======>  Preparing: select * from t_type where parent_id = ?
+2021-08-04 16:26:54.497 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======> Parameters: 11(Integer)
+2021-08-04 16:26:54.499 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <======      Total: 0
+2021-08-04 16:26:54.499 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======>  Preparing: select * from t_type where parent_id = ?
+2021-08-04 16:26:54.500 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======> Parameters: 12(Integer)
+2021-08-04 16:26:54.500 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <======      Total: 0
+2021-08-04 16:26:54.501 DEBUG 16332 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <====      Total: 2
+2021-08-04 16:26:54.501 DEBUG 16332 --- [http-nio-8081-exec-2] com.wu.blog.dao.TypeDao.findAllTypes     : <==      Total: 3
+2021-08-04 22:12:48.971  INFO 15220 --- [restartedMain] com.wu.blog.Application                  : Starting Application on DESKTOP-L2NQSBF with PID 15220 (G:\IntelliJIDEA2018\7blog\target\classes started by 57one in G:\IntelliJIDEA2018\7blog)
+2021-08-04 22:12:48.974 DEBUG 15220 --- [restartedMain] com.wu.blog.Application                  : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2021-08-04 22:12:48.974  INFO 15220 --- [restartedMain] com.wu.blog.Application                  : No active profile set, falling back to default profiles: default
+2021-08-04 22:12:49.006  INFO 15220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-04 22:12:49.007  INFO 15220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-04 22:12:50.869  INFO 15220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-08-04 22:12:50.878  INFO 15220 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-04 22:12:50.878  INFO 15220 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-08-04 22:12:50.966  INFO 15220 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-04 22:12:50.967  INFO 15220 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1960 ms
+2021-08-04 22:12:51.932  INFO 15220 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-04 22:12:51.991  INFO 15220 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-04 22:12:52.011  WARN 15220 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-08-04 22:12:52.150  INFO 15220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-08-04 22:12:52.151  INFO 15220 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-08-04 22:12:52.166  INFO 15220 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-08-04 22:12:52.203  INFO 15220 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-08-04 22:12:52.326  INFO 15220 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteBlogByIdUsingDELETE_1
+2021-08-04 22:12:52.348  INFO 15220 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addTypeUsingPOST_1
+2021-08-04 22:12:52.349  INFO 15220 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingDELETE_1
+2021-08-04 22:12:52.352  INFO 15220 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findTypesByTypeNameUsingGET_1
+2021-08-04 22:12:52.354  INFO 15220 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2021-08-04 22:12:52.378  INFO 15220 --- [restartedMain] com.wu.blog.Application                  : Started Application in 4.008 seconds (JVM running for 6.04)
+2021-08-04 22:13:32.263  INFO 15220 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-04 22:13:32.416  INFO 15220 --- [restartedMain] com.wu.blog.Application                  : Starting Application on DESKTOP-L2NQSBF with PID 15220 (G:\IntelliJIDEA2018\7blog\target\classes started by 57one in G:\IntelliJIDEA2018\7blog)
+2021-08-04 22:13:32.416 DEBUG 15220 --- [restartedMain] com.wu.blog.Application                  : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2021-08-04 22:13:32.416  INFO 15220 --- [restartedMain] com.wu.blog.Application                  : No active profile set, falling back to default profiles: default
+2021-08-04 22:13:32.776  INFO 15220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-08-04 22:13:32.776  INFO 15220 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-04 22:13:32.776  INFO 15220 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-08-04 22:13:32.796  INFO 15220 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-04 22:13:32.796  INFO 15220 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 378 ms
+2021-08-04 22:13:33.008  INFO 15220 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-04 22:13:33.037  INFO 15220 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-04 22:13:33.040  WARN 15220 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-08-04 22:13:33.082  INFO 15220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-08-04 22:13:33.083  INFO 15220 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-08-04 22:13:33.083  INFO 15220 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-08-04 22:13:33.089  INFO 15220 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-08-04 22:13:33.118  INFO 15220 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteBlogByIdUsingDELETE_1
+2021-08-04 22:13:33.136  INFO 15220 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addTypeUsingPOST_1
+2021-08-04 22:13:33.136  INFO 15220 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingDELETE_1
+2021-08-04 22:13:33.139  INFO 15220 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findTypesByTypeNameUsingGET_1
+2021-08-04 22:13:33.141  INFO 15220 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2021-08-04 22:13:33.151  INFO 15220 --- [restartedMain] com.wu.blog.Application                  : Started Application in 0.767 seconds (JVM running for 46.813)
+2021-08-04 22:13:33.153  INFO 15220 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-08-04 22:19:09.229  INFO 15220 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-04 22:19:09.342  INFO 15220 --- [restartedMain] com.wu.blog.Application                  : Starting Application on DESKTOP-L2NQSBF with PID 15220 (G:\IntelliJIDEA2018\7blog\target\classes started by 57one in G:\IntelliJIDEA2018\7blog)
+2021-08-04 22:19:09.342 DEBUG 15220 --- [restartedMain] com.wu.blog.Application                  : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2021-08-04 22:19:09.347  INFO 15220 --- [restartedMain] com.wu.blog.Application                  : No active profile set, falling back to default profiles: default
+2021-08-04 22:19:09.648  INFO 15220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-08-04 22:19:09.648  INFO 15220 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-04 22:19:09.648  INFO 15220 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-08-04 22:19:09.658  INFO 15220 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-04 22:19:09.658  INFO 15220 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 309 ms
+2021-08-04 22:19:09.981  INFO 15220 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-04 22:19:10.014  INFO 15220 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-04 22:19:10.014  WARN 15220 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-08-04 22:19:10.047  INFO 15220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-08-04 22:19:10.047  INFO 15220 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-08-04 22:19:10.047  INFO 15220 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-08-04 22:19:10.069  INFO 15220 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-08-04 22:19:10.092  INFO 15220 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteBlogByIdUsingDELETE_1
+2021-08-04 22:19:10.108  INFO 15220 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addTypeUsingPOST_1
+2021-08-04 22:19:10.108  INFO 15220 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingDELETE_1
+2021-08-04 22:19:10.108  INFO 15220 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findTypesByTypeNameUsingGET_1
+2021-08-04 22:19:10.108  INFO 15220 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2021-08-04 22:19:10.108  INFO 15220 --- [restartedMain] com.wu.blog.Application                  : Started Application in 0.798 seconds (JVM running for 383.785)
+2021-08-04 22:19:10.124  INFO 15220 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-08-04 22:43:35.836  INFO 7336 --- [restartedMain] com.wu.blog.Application                  : Starting Application on DESKTOP-L2NQSBF with PID 7336 (G:\IntelliJIDEA2018\7blog\target\classes started by 57one in G:\IntelliJIDEA2018\7blog)
+2021-08-04 22:43:35.853 DEBUG 7336 --- [restartedMain] com.wu.blog.Application                  : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2021-08-04 22:43:35.853  INFO 7336 --- [restartedMain] com.wu.blog.Application                  : No active profile set, falling back to default profiles: default
+2021-08-04 22:43:35.884  INFO 7336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-04 22:43:35.884  INFO 7336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-04 22:43:36.936  INFO 7336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-08-04 22:43:36.936  INFO 7336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-04 22:43:36.936  INFO 7336 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-08-04 22:43:37.005  INFO 7336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-04 22:43:37.005  INFO 7336 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1121 ms
+2021-08-04 22:43:37.569  INFO 7336 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-04 22:43:37.621  INFO 7336 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-04 22:43:37.638  WARN 7336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-08-04 22:43:37.737  INFO 7336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-08-04 22:43:37.737  INFO 7336 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-08-04 22:43:37.753  INFO 7336 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-08-04 22:43:37.769  INFO 7336 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-08-04 22:43:37.893  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteBlogByIdUsingDELETE_1
+2021-08-04 22:43:37.909  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addTypeUsingPOST_1
+2021-08-04 22:43:37.909  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingDELETE_1
+2021-08-04 22:43:37.921  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findTypesByTypeNameUsingGET_1
+2021-08-04 22:43:37.921  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2021-08-04 22:43:37.941  INFO 7336 --- [restartedMain] com.wu.blog.Application                  : Started Application in 2.409 seconds (JVM running for 3.657)
+2021-08-04 23:24:59.867  INFO 7336 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-04 23:24:59.994  INFO 7336 --- [restartedMain] com.wu.blog.Application                  : Starting Application on DESKTOP-L2NQSBF with PID 7336 (G:\IntelliJIDEA2018\7blog\target\classes started by 57one in G:\IntelliJIDEA2018\7blog)
+2021-08-04 23:24:59.994 DEBUG 7336 --- [restartedMain] com.wu.blog.Application                  : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2021-08-04 23:24:59.996  INFO 7336 --- [restartedMain] com.wu.blog.Application                  : No active profile set, falling back to default profiles: default
+2021-08-04 23:25:00.376  INFO 7336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-08-04 23:25:00.377  INFO 7336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-04 23:25:00.377  INFO 7336 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-08-04 23:25:00.906  INFO 7336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-04 23:25:00.906  INFO 7336 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 908 ms
+2021-08-04 23:25:01.188  INFO 7336 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-04 23:25:01.218  INFO 7336 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-04 23:25:01.218  WARN 7336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-08-04 23:25:01.267  INFO 7336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-08-04 23:25:01.271  INFO 7336 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-08-04 23:25:01.271  INFO 7336 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-08-04 23:25:01.277  INFO 7336 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-08-04 23:25:01.298  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteBlogByIdUsingDELETE_1
+2021-08-04 23:25:01.317  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addTypeUsingPOST_1
+2021-08-04 23:25:01.317  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingDELETE_1
+2021-08-04 23:25:01.317  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findTypesByTypeNameUsingGET_1
+2021-08-04 23:25:01.317  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2021-08-04 23:25:01.328  INFO 7336 --- [restartedMain] com.wu.blog.Application                  : Started Application in 1.357 seconds (JVM running for 2487.044)
+2021-08-04 23:25:01.328  INFO 7336 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-08-04 23:31:12.725  INFO 7336 --- [Thread-16] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-04 23:31:12.858  INFO 7336 --- [restartedMain] com.wu.blog.Application                  : Starting Application on DESKTOP-L2NQSBF with PID 7336 (G:\IntelliJIDEA2018\7blog\target\classes started by 57one in G:\IntelliJIDEA2018\7blog)
+2021-08-04 23:31:12.858 DEBUG 7336 --- [restartedMain] com.wu.blog.Application                  : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2021-08-04 23:31:12.858  INFO 7336 --- [restartedMain] com.wu.blog.Application                  : No active profile set, falling back to default profiles: default
+2021-08-04 23:31:13.233  INFO 7336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-08-04 23:31:13.233  INFO 7336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-04 23:31:13.233  INFO 7336 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-08-04 23:31:13.255  INFO 7336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-04 23:31:13.255  INFO 7336 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 395 ms
+2021-08-04 23:31:13.526  INFO 7336 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-04 23:31:13.566  INFO 7336 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-04 23:31:13.574  WARN 7336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-08-04 23:31:13.649  INFO 7336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-08-04 23:31:13.649  INFO 7336 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-08-04 23:31:13.650  INFO 7336 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-08-04 23:31:13.660  INFO 7336 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-08-04 23:31:13.687  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteBlogByIdUsingDELETE_1
+2021-08-04 23:31:13.704  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addTypeUsingPOST_1
+2021-08-04 23:31:13.705  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingDELETE_1
+2021-08-04 23:31:13.707  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findTypesByTypeNameUsingGET_1
+2021-08-04 23:31:13.709  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2021-08-04 23:31:13.719  INFO 7336 --- [restartedMain] com.wu.blog.Application                  : Started Application in 0.883 seconds (JVM running for 2859.434)
+2021-08-04 23:31:13.720  INFO 7336 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-08-04 23:52:48.272  INFO 7336 --- [Thread-21] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-04 23:52:48.447  INFO 7336 --- [restartedMain] com.wu.blog.Application                  : Starting Application on DESKTOP-L2NQSBF with PID 7336 (G:\IntelliJIDEA2018\7blog\target\classes started by 57one in G:\IntelliJIDEA2018\7blog)
+2021-08-04 23:52:48.447 DEBUG 7336 --- [restartedMain] com.wu.blog.Application                  : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2021-08-04 23:52:48.447  INFO 7336 --- [restartedMain] com.wu.blog.Application                  : No active profile set, falling back to default profiles: default
+2021-08-04 23:52:48.998  INFO 7336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-08-04 23:52:48.998  INFO 7336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-04 23:52:48.998  INFO 7336 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-08-04 23:52:49.025  INFO 7336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-04 23:52:49.026  INFO 7336 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 578 ms
+2021-08-04 23:52:49.290  INFO 7336 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-04 23:52:49.331  INFO 7336 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-04 23:52:49.336  WARN 7336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-08-04 23:52:49.405  INFO 7336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-08-04 23:52:49.406  INFO 7336 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-08-04 23:52:49.407  INFO 7336 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-08-04 23:52:49.413  INFO 7336 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-08-04 23:52:49.447  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteBlogByIdUsingDELETE_1
+2021-08-04 23:52:49.464  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addTypeUsingPOST_1
+2021-08-04 23:52:49.465  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingDELETE_1
+2021-08-04 23:52:49.467  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findTypesByTypeNameUsingGET_1
+2021-08-04 23:52:49.470  INFO 7336 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2021-08-04 23:52:49.482  INFO 7336 --- [restartedMain] com.wu.blog.Application                  : Started Application in 1.056 seconds (JVM running for 4155.196)
+2021-08-04 23:52:49.484  INFO 7336 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

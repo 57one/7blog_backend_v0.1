@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wu.blog.dao.SentenceDao">
+
+    <select id="findSentencesNum" resultType="Integer">
+        select count(*)
+        from t_sentence
+    </select>
+
+    <select id="getRandomSentences" resultType="Sentence">
+        select *
+        from t_sentence
+        order by RAND() limit 15
+    </select>
+
+    <insert id="addSentence" parameterType="Sentence">
+        insert into t_sentence (content)
+        values (#{content})
+    </insert>
+
+    <select id="findSentenceByContent">
+        select *
+        from t_sentence
+        where content=#{content}
+    </select>
+</mapper>

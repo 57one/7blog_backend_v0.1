@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wu.blog.dao.DiaryDao">
+    <select id="findDiariesOfPages" resultType="Diary">
+        select *
+        from t_diary
+        order by create_time desc
+        limit #{begin},#{size}
+    </select>
+
+    <select id="findDiaryNum" resultType="Integer">
+        select COUNT(*)
+        from t_diary
+    </select>
+
+    <delete id="deleteDiaryById">
+        delete
+        from t_diary
+        where diary_id = #{diaryId}
+    </delete>
+
+    <insert id="addDiary" parameterType="Blog">
+        insert into t_diary(content,create_time,update_time)
+        values(#{content},#{createTime},#{updateTime})
+    </insert>
+
+    <update id="updateDiary">
+        update t_diary
+        set
+        content=#{content},
+        update_time=#{updateTime}
+        where diary_id=#{diaryId}
+    </update>
+    <select id="findDiaryById" resultType="Diary">
+        select *
+        from t_diary
+        where diary_id=#{diaryId}
+    </select>
+</mapper>

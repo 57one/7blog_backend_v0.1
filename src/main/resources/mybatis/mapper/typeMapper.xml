@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wu.blog.dao.TypeDao">
+
+    <select id="findAllTypes" resultMap="typeMap">
+        select * from t_type where parent_id = 0
+    </select>
+
+    <select id="findTypeByParentId" resultMap="typeMap">
+        select * from t_type where parent_id = #{parent_id}
+    </select>
+
+    <resultMap id="typeMap" type="Type">
+        <id property="typeId" column="type_id"/>
+        <result property="typeName" column="type_name"/>
+        <result property="parentId" column="parent_id"/>
+        <result property="typeSize" column="type_size"/>
+        <collection property="children" ofType="Type" column="type_id" select="findTypeByParentId"/>
+    </resultMap>
+
+    <select id="findAllParentTypes" resultMap="typeParentMap">
+        select type_id,type_name
+        from t_type
+        where parent_id = 0
+    </select>
+
+    <resultMap id="typeParentMap" type="Type">
+        <id property="typeId" column="type_id"/>
+        <result property="typeName" column="type_name"/>
+    </resultMap>
+
+    <insert id="addType"  parameterType="Type">
+        insert into t_type (type_name,parent_id)
+        values (#{typeName},#{parentId})
+    </insert>
+
+    <delete id="deleteTypeById">
+        delete from t_type
+        where type_id = #{typeId}
+        or parent_id = #{typeId}
+    </delete>
+
+    <update id="updateType">
+        update t_type
+        set type_name = #{typeName},parent_id = #{parentId}
+        where type_id = #{typeId}
+    </update>
+
+    <select id="findTypeById" resultType="Type">
+        select type_id,type_name,parent_id,type_size
+        from t_type
+        where type_id = #{typeId}
+    </select>
+
+    <select id="findTypesOfPages" resultMap="typeMap">
+        select *
+        from t_type
+        where parent_id = 0
+        limit #{begin},#{size}
+    </select>
+
+    <select id="findTypesByTypeName" resultMap="typeMap">
+        select *
+        from t_type
+        where type_name like #{typeName}
+    </select>
+
+    <select id="findTypeIdByParentId" resultType="Integer">
+        select type_id
+        from t_type
+        where parent_id = #{parentId}
+    </select>
+
+    <update id="updateTypeSize" parameterType="Type">
+        update t_type
+        set type_size = #{typeSize}
+        where type_id=#{typeId}
+    </update>
+</mapper>

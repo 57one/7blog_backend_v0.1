@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/7blog?useSSL=true&setUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: ''
+logging:
+  level:
+    root: info
+    com.wu: debug
+  file:
+    path: log/7blog.log
+server:
+  port: 8081
+
+mybatis:
+  type-aliases-package: com.wu.blog.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true

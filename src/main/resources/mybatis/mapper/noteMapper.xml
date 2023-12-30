@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wu.blog.dao.NoteDao">
+    <select id="findNoteById" resultType="Note">
+        select *
+        from t_note
+        where note_id=#{note_id}
+    </select>
+
+    <insert id="addNote" parameterType="Note">
+        insert into t_note (note_name,type_id,create_time,update_time)
+        values (#{noteName},#{typeId},#{createTime},#{updateTime})
+    </insert>
+
+    <update id="updateNote" parameterType="Note">
+        update t_note
+        set
+        content=#{content},
+        update_time=#{updateTime}
+        where note_id=#{noteId}
+    </update>
+
+    <select id="findNoteByName" resultType="Note">
+        select *
+        from t_note
+        where note_name=#{noteName}
+    </select>
+
+    <delete id="deleteNoteById">
+        delete
+        from t_note
+        where note_id=#{noteId}
+    </delete>
+</mapper>

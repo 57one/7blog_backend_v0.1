@@ -1,0 +1,94 @@
+2020-11-30 22:51:17.732  INFO 6632 --- [restartedMain] com.wu.blog.Application                  : Starting Application on DESKTOP-L2NQSBF with PID 6632 (G:\IntelliJIDEA2018\7blog\classes\artifacts\7blog_jar\7blog.jar started by 57one in G:\IntelliJIDEA2018\7blog\classes\artifacts\7blog_jar)
+2020-11-30 22:51:17.732 DEBUG 6632 --- [restartedMain] com.wu.blog.Application                  : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-11-30 22:51:17.732  INFO 6632 --- [restartedMain] com.wu.blog.Application                  : No active profile set, falling back to default profiles: default
+2020-11-30 22:51:17.801  INFO 6632 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-30 22:51:17.801  INFO 6632 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-30 22:51:19.716  INFO 6632 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-11-30 22:51:19.747  INFO 6632 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-30 22:51:19.747  INFO 6632 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-11-30 22:51:20.302  INFO 6632 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-30 22:51:20.302  INFO 6632 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2501 ms
+2020-11-30 22:51:21.268  INFO 6632 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-11-30 22:51:21.360  INFO 6632 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-30 22:51:21.388  WARN 6632 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-30 22:51:21.570  INFO 6632 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-11-30 22:51:21.573  INFO 6632 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-11-30 22:51:21.583  INFO 6632 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-11-30 22:51:21.621  INFO 6632 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-11-30 22:51:21.764  INFO 6632 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteBlogByIdUsingDELETE_1
+2020-11-30 22:51:21.805  INFO 6632 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addTypeUsingPOST_1
+2020-11-30 22:51:21.805  INFO 6632 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingDELETE_1
+2020-11-30 22:51:21.815  INFO 6632 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findTypesByTypeNameUsingGET_1
+2020-11-30 22:51:21.815  INFO 6632 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2020-11-30 22:51:21.845  INFO 6632 --- [restartedMain] com.wu.blog.Application                  : Started Application in 4.796 seconds (JVM running for 8.06)
+2020-11-30 22:51:40.635  INFO 6632 --- [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-30 22:51:40.635  INFO 6632 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-30 22:51:40.651  INFO 6632 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-11-30 22:51:40.682  INFO 6632 --- [http-nio-8081-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-30 22:51:44.823  INFO 6632 --- [http-nio-8081-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-30 22:51:44.838 DEBUG 6632 --- [http-nio-8081-exec-7] com.wu.blog.dao.CommonDao.findCommon     : ==>  Preparing: select * from t_common limit 0,1
+2020-11-30 22:51:44.870 DEBUG 6632 --- [http-nio-8081-exec-7] com.wu.blog.dao.CommonDao.findCommon     : ==> Parameters: 
+2020-11-30 22:51:44.885 DEBUG 6632 --- [http-nio-8081-exec-4] c.w.b.d.B.findBlogsByConditionOfPages    : ==>  Preparing: select * from t_blog WHERE published = 1 order by create_time desc limit ?,?
+2020-11-30 22:51:44.885 DEBUG 6632 --- [http-nio-8081-exec-4] c.w.b.d.B.findBlogsByConditionOfPages    : ==> Parameters: 0(Integer), 5(Integer)
+2020-11-30 22:51:44.923 DEBUG 6632 --- [http-nio-8081-exec-1] c.w.b.d.B.findBlogsByConditionOfPages    : ==>  Preparing: select * from t_blog WHERE published = 1 and recommend = 1 order by create_time desc limit ?,?
+2020-11-30 22:51:44.923 DEBUG 6632 --- [http-nio-8081-exec-1] c.w.b.d.B.findBlogsByConditionOfPages    : ==> Parameters: 0(Integer), 4(Integer)
+2020-11-30 22:51:44.970 DEBUG 6632 --- [http-nio-8081-exec-3] c.w.b.d.B.findBlogsNumByConditionOfPages : ==>  Preparing: select COUNT(*) from t_blog WHERE published = 1
+2020-11-30 22:51:44.970 DEBUG 6632 --- [http-nio-8081-exec-3] c.w.b.d.B.findBlogsNumByConditionOfPages : ==> Parameters: 
+2020-11-30 22:51:45.001 DEBUG 6632 --- [http-nio-8081-exec-7] com.wu.blog.dao.CommonDao.findCommon     : <==      Total: 1
+2020-11-30 22:51:45.039 DEBUG 6632 --- [http-nio-8081-exec-3] c.w.b.d.B.findBlogsNumByConditionOfPages : <==      Total: 1
+2020-11-30 22:51:45.039 DEBUG 6632 --- [http-nio-8081-exec-6] c.w.b.d.SentenceDao.getRandomSentences   : ==>  Preparing: select * from t_sentence order by RAND() limit 15
+2020-11-30 22:51:45.039 DEBUG 6632 --- [http-nio-8081-exec-6] c.w.b.d.SentenceDao.getRandomSentences   : ==> Parameters: 
+2020-11-30 22:51:45.039 DEBUG 6632 --- [http-nio-8081-exec-1] com.wu.blog.dao.BlogDao.findTypeById     : ====>  Preparing: select * from t_type where type_id = ?
+2020-11-30 22:51:45.039 DEBUG 6632 --- [http-nio-8081-exec-4] com.wu.blog.dao.BlogDao.findTypeById     : ====>  Preparing: select * from t_type where type_id = ?
+2020-11-30 22:51:45.039 DEBUG 6632 --- [http-nio-8081-exec-1] com.wu.blog.dao.BlogDao.findTypeById     : ====> Parameters: 6(Integer)
+2020-11-30 22:51:45.039 DEBUG 6632 --- [http-nio-8081-exec-4] com.wu.blog.dao.BlogDao.findTypeById     : ====> Parameters: 2(Integer)
+2020-11-30 22:51:45.039 DEBUG 6632 --- [http-nio-8081-exec-2] com.wu.blog.dao.TypeDao.findAllTypes     : ==>  Preparing: select * from t_type where parent_id = 0
+2020-11-30 22:51:45.039 DEBUG 6632 --- [http-nio-8081-exec-2] com.wu.blog.dao.TypeDao.findAllTypes     : ==> Parameters: 
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-4] com.wu.blog.dao.BlogDao.findTypeById     : <====      Total: 1
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-1] com.wu.blog.dao.BlogDao.findTypeById     : <====      Total: 1
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ====>  Preparing: select * from t_type where parent_id = ?
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-4] com.wu.blog.dao.BlogDao.findTypeById     : ====>  Preparing: select * from t_type where type_id = ?
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-1] com.wu.blog.dao.BlogDao.findTypeById     : ====>  Preparing: select * from t_type where type_id = ?
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ====> Parameters: 1(Integer)
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-4] com.wu.blog.dao.BlogDao.findTypeById     : ====> Parameters: 6(Integer)
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-1] com.wu.blog.dao.BlogDao.findTypeById     : ====> Parameters: 7(Integer)
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======>  Preparing: select * from t_type where parent_id = ?
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-1] com.wu.blog.dao.BlogDao.findTypeById     : <====      Total: 1
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======> Parameters: 2(Integer)
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-5] c.w.b.d.B.findBlogsNumByConditionOfPages : ==>  Preparing: select COUNT(*) from t_blog WHERE published = 1 and recommend = 1
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-5] c.w.b.d.B.findBlogsNumByConditionOfPages : ==> Parameters: 
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <======      Total: 0
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-5] c.w.b.d.B.findBlogsNumByConditionOfPages : <==      Total: 1
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======>  Preparing: select * from t_type where parent_id = ?
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-4] com.wu.blog.dao.BlogDao.findTypeById     : <====      Total: 1
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-1] c.w.b.d.B.findBlogsByConditionOfPages    : <==      Total: 4
+2020-11-30 22:51:45.070 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======> Parameters: 3(Integer)
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-4] com.wu.blog.dao.BlogDao.findTypeById     : ====>  Preparing: select * from t_type where type_id = ?
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-4] com.wu.blog.dao.BlogDao.findTypeById     : ====> Parameters: 7(Integer)
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <======      Total: 0
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======>  Preparing: select * from t_type where parent_id = ?
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-4] com.wu.blog.dao.BlogDao.findTypeById     : <====      Total: 1
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======> Parameters: 4(Integer)
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-4] c.w.b.d.B.findBlogsByConditionOfPages    : <==      Total: 5
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <======      Total: 0
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <====      Total: 3
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ====>  Preparing: select * from t_type where parent_id = ?
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ====> Parameters: 5(Integer)
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======>  Preparing: select * from t_type where parent_id = ?
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======> Parameters: 6(Integer)
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <======      Total: 0
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======>  Preparing: select * from t_type where parent_id = ?
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======> Parameters: 7(Integer)
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <======      Total: 0
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <====      Total: 2
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ====>  Preparing: select * from t_type where parent_id = ?
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ====> Parameters: 10(Integer)
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======>  Preparing: select * from t_type where parent_id = ?
+2020-11-30 22:51:45.085 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======> Parameters: 11(Integer)
+2020-11-30 22:51:45.101 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <======      Total: 0
+2020-11-30 22:51:45.101 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======>  Preparing: select * from t_type where parent_id = ?
+2020-11-30 22:51:45.101 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : ======> Parameters: 12(Integer)
+2020-11-30 22:51:45.101 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <======      Total: 0
+2020-11-30 22:51:45.101 DEBUG 6632 --- [http-nio-8081-exec-2] c.w.blog.dao.TypeDao.findTypeByParentId  : <====      Total: 2
+2020-11-30 22:51:45.101 DEBUG 6632 --- [http-nio-8081-exec-2] com.wu.blog.dao.TypeDao.findAllTypes     : <==      Total: 3
+2020-11-30 22:51:45.286 DEBUG 6632 --- [http-nio-8081-exec-6] c.w.b.d.SentenceDao.getRandomSentences   : <==      Total: 12

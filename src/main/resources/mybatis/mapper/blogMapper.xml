@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wu.blog.dao.BlogDao">
+    <select id="findBlogsOfPages" resultMap="blogMap">
+        select *
+        from t_blog
+        order by create_time desc
+        limit #{begin},#{size}
+    </select>
+
+    <resultMap id="blogMap" type="Blog">
+        <id property="blogId" column="blog_id"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="published" column="published"/>
+        <result property="recommend" column="recommend"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="comments" column="comments"/>
+        <result property="views" column="views"/>
+        <result property="likes" column="likes"/>
+        <association property="type" column="type_id" javaType="Type" select="findTypeById"/>
+    </resultMap>
+
+    <select id="findTypeById" resultType="Type">
+        select *
+        from t_type
+        where type_id = #{type_id}
+    </select>
+
+    <select id="findBlogsNum" resultType="Integer">
+        select COUNT(*)
+        from t_blog
+    </select>
+
+    <delete id="deleteBlogById">
+        delete
+        from t_blog
+        where blog_id = #{blogId}
+    </delete>
+
+    <insert id="addBlog" parameterType="Blog">
+        insert into t_blog (title,content,type_id,published,recommend,create_time,update_time)
+        values (#{title},#{content},#{type.typeId},#{published},#{recommend},#{createTime},#{updateTime})
+    </insert>
+
+    <select id="findBlogByTitle" resultType="Blog">
+        select *
+        from t_blog
+        where title = #{title}
+    </select>
+
+    <select id="findBlogById" resultMap="blogMap">
+        select *
+        from t_blog
+        where blog_id = #{blogId}
+    </select>
+
+    <update id="updateBlog" parameterType="Blog">
+        update t_blog
+        set
+        title = #{title},
+        content = #{content},
+        type_id = #{type.typeId},
+        published = #{published},
+        recommend = #{recommend},
+        update_time = #{updateTime}
+        where blog_id = #{blogId}
+    </update>
+
+    <select id="findBlogsByCondition" parameterType="Blog" resultMap="blogMap">
+        select * from t_blog
+        <where>
+            <if test="blog.title!=null and blog.title!=''">
+                and title like #{blog.title}
+            </if>
+            <if test="blog.type!=null and blog.type.typeId!=null">
+                and type_id = #{blog.type.typeId}
+            </if>
+            <if test="blog.published!=null and blog.published==true">
+                and published = 1
+            </if>
+            <if test="blog.published!=null and blog.published==false">
+                and published = 0
+            </if>
+            <if test="blog.recommend!=null and blog.recommend==true">
+                and recommend = 1
+            </if>
+            <if test="blog.recommend!=null and blog.recommend==false">
+                and recommend = 0
+            </if>
+        </where>
+    </select>
+
+    <select id="findBlogsByConditionOfPages" parameterType="Blog" resultMap="blogMap">
+        select * from t_blog
+        <where>
+            <if test="blog.title!=null and blog.title!=''">
+                and title like #{blog.title}
+            </if>
+            <if test="blog.type!=null and blog.type.typeId!=null">
+                and type_id = #{blog.type.typeId}
+            </if>
+            <if test="blog.published!=null and blog.published==true">
+                and published = 1
+            </if>
+            <if test="blog.published!=null and blog.published==false">
+                and published = 0
+            </if>
+            <if test="blog.recommend!=null and blog.recommend==true">
+                and recommend = 1
+            </if>
+            <if test="blog.recommend!=null and blog.recommend==false">
+                and recommend = 0
+            </if>
+        </where>
+        order by create_time desc
+        limit #{begin},#{size}
+    </select>
+
+    <select id="findBlogsNumByConditionOfPages" resultType="Integer">
+        select COUNT(*) from t_blog
+        <where>
+            <if test="blog.title!=null and blog.title!=''">
+                and title like #{blog.title}
+            </if>
+            <if test="blog.type!=null and blog.type.typeId!=null">
+                and type_id = #{blog.type.typeId}
+            </if>
+            <if test="blog.published!=null and blog.published==true">
+                and published = 1
+            </if>
+            <if test="blog.published!=null and blog.published==false">
+                and published = 0
+            </if>
+            <if test="blog.recommend!=null and blog.recommend==true">
+                and recommend = 1
+            </if>
+            <if test="blog.recommend!=null and blog.recommend==false">
+                and recommend = 0
+            </if>
+        </where>
+    </select>
+
+    <select id="findBlogsByTypeId" resultMap="blogMap">
+        select * from t_blog
+        <where>
+            <if test="typeIds!=null">
+                and type_id in
+                <foreach collection="typeIds" item="typeId" open="(" close=")" separator=",">
+                    #{typeId}
+                </foreach>
+            </if>
+            and published = 1
+        </where>
+        order by create_time desc
+        limit #{begin},#{size}
+
+        <!--where type_id in-->
+        <!--<foreach collection="typeIds" item="typeId" open="(" close=")" separator=",">-->
+            <!--#{typeId}-->
+        <!--</foreach>-->
+        <!--and published=1-->
+        <!--order by create_time desc-->
+        <!--limit #{begin},#{size}-->
+    </select>
+
+    <select id="findBlogsNumByTypeId" resultType="Integer">
+        select COUNT(*) from t_blog
+        where type_id in
+        <foreach collection="typeIds" item="typeId" open="(" close=")" separator=",">
+            #{typeId}
+        </foreach>
+        and published=1
+    </select>
+</mapper>

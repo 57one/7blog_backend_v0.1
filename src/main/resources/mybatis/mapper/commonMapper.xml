@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wu.blog.dao.CommonDao">
+    <select id="findCommon" resultType="Common">
+        select *
+        from t_common
+        limit 0,1
+    </select>
+
+    <select id="checkDiaryPASD" resultType="Common">
+        select *
+        from t_common
+        where diary_pasd=#{password}
+    </select>
+
+    <update id="updateCommon" parameterType="Common">
+        update t_common
+        <set>
+            <if test="notes!=null and notes!=0">
+                notes=#{notes}
+            </if>
+            <if test="blogs!=null and blogs!=0">
+                blogs=#{blogs}
+            </if>
+            <if test="likes!=null and likes!=0">
+                likes=#{likes}
+            </if>
+            <if test="diaryPASD!=null and diaryPASD!=''">
+                diary_pasd=#{diaryPASD}
+            </if>
+        </set>
+    </update>
+</mapper>
